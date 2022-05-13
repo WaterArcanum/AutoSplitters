@@ -40,6 +40,7 @@ split
         // … and split if the previous stateID was a level or zone respectively.
         if(Array.Exists(stateArray, x => x == old.stateID))
         {
+            if(current.stateID == vars.GameOverScreen) return; // Do not split on death.
             return true;
         }
     }
