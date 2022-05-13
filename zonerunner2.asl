@@ -18,8 +18,12 @@ startup
     settings.Add("split_all", true, "Split every level");
     settings.SetToolTip("split_all", "When disabled, splits occur only on zone transitions.");
 
+    settings.Add("reset_on_death", false, "Reset on death");
+    settings.SetToolTip("reset_on_death", "When enabled, the timer resets whenever you die.");
+
     vars.Zone1StartScreen = 3;
     vars.GameOverScreen = 2;
+    vars.TitleScreen = 0;
 }
 
 start
@@ -43,6 +47,6 @@ split
 
 reset
 {
-    return current.stateID == vars.GameOverScreen;
+    return current.stateID == vars.TitleScreen || (current.stateID == vars.GameOverScreen && settings["reset_on_death"]);
 }
 
