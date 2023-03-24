@@ -60,5 +60,6 @@ split
 
 reset
 {
-    return current.stateID == vars.TitleScreen || (current.stateID == vars.GameOverScreen && settings["reset_on_gameover"]);
+    if(settings["reset_on_gameover"])
+        return current.stateID == vars.TitleScreen current.stateID == vars.GameOverScreen;
 }
