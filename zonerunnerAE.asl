@@ -14,15 +14,15 @@ startup
     var Zone1States = Enumerable.Range(2, 10); // 2–11
     var Zone2States = new int[] {14, 12, 15, 17, 18, 19, 20, 21, 1, 22};
     var Zone3States = new int[] {23, 26, 29, 30, 16, 27, 31, 34, 32, 33};
-    var Zone4States = new int[] {39, 40, 42, 49, 50, 51, 52, 53, 41, 43};
+    var Zone4States = new int[] {39, 40, 42, 49, 50, 51, 52, 53, 41, 43, 37};
     var Zone5States = new int[] {68, 60, 71, 63, 69, 70, 72, 62, 73, 74};
     vars.LevelStates =  Zone1States.Union(Zone2States).Union(Zone3States)
                             .Union(Zone4States).Union(Zone5States).ToArray(); // Put every level ID in one array
     vars.ZoneLastLevelStates = new int[] {11, 22, 33, 43, 74};
 
     // Unused vars:
-    // vars.ZoneWinStates = new int[] {67, 66, 65, 37, 58};
-    // vars.ZoneStartStates = new int[] {0, 13, 38, 24, 82};
+    // vars.ZoneWinStates = new int[] {67, 66, 65, 82, 58};
+    // vars.ZoneStartStates = new int[] {0, 13, 38, 24, 61};
     // vars.CreditsScreen = 84;
     
     vars.Zone1StartScreen = 0;
