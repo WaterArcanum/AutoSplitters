@@ -61,5 +61,5 @@ split
 reset
 {
     if(settings["reset_on_gameover"])
-        return current.stateID == vars.TitleScreen current.stateID == vars.GameOverScreen;
+        return current.stateID == vars.TitleScreen || current.stateID == vars.GameOverScreen;
 }
